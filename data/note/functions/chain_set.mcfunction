@@ -1,0 +1,2 @@
+give @s armor_stand{display:{Name:'{"text":"鎖で飛ばされる場所","italic":false,"color":"light_purple"}'},EntityTag:{Invisible:1,Marker:1,Tags:["Note_chain","chain"]}} 1
+give @s armor_stand{display:{Name:'{"text":"2マス上にレッドストーンブロックが置かれる","italic":false,"color":"light_purple"}'},EntityTag:{Invisible:1,Marker:1,Tags:["Note_door_open","chain"]}} 1

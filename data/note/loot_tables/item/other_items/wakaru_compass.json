@@ -1,0 +1,26 @@
+{
+    "type": "generic",
+    "pools":[
+      {
+        "rolls":1,
+        "entries":[
+          {
+            "type":"minecraft:item",
+            "name":"minecraft:compass",
+            "functions":[
+              {
+                "function":"minecraft:set_lore",
+                "entity" : "this",
+                "replace": true,
+                "lore":[
+                    ["", {"translate":"%s専用アイテム","with":[{"text":"Ⅼが分かる警察","italic":false,"color":"aqua"}],"italic":false,"color":"white"}],
+                    ["", {"translate":"%sの位置がわかる","with":[{"text":"Ⅼ","italic":false,"color":"green"}],"italic":false,"color":"white"}]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

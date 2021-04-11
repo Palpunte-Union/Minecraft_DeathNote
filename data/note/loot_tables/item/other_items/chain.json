@@ -1,0 +1,22 @@
+{
+    "type": "generic",
+    "pools":[
+      {
+        "rolls":1,
+        "entries":[
+          {
+            "type":"minecraft:item",
+            "name":"minecraft:chain",
+            "functions":[
+              {
+                "function":"minecraft:set_name",
+                "name": [
+                  ["",{"text":"鎖","italic":false}]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

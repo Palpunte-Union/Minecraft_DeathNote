@@ -1,0 +1,25 @@
+{
+    "type": "generic",
+    "pools":[
+      {
+        "rolls":1,
+        "entries":[
+          {
+            "type":"minecraft:item",
+            "name":"minecraft:paper",
+            "functions":[
+              {
+                "function":"minecraft:set_name",
+                "name": [
+                  ["",{"text":"デスノートの切れ端","italic":false}]
+                ]
+              },{
+                "function":"minecraft:set_nbt",
+                "tag":"{Tags:[\"MDWitem\"]}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

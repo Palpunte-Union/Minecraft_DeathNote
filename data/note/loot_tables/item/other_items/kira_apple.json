@@ -1,0 +1,29 @@
+{
+    "type": "generic",
+    "pools":[
+      {
+        "rolls":1,
+        "entries":[
+          {
+            "type":"minecraft:item",
+            "name":"minecraft:apple",
+            "functions":[
+              {
+                "function":"minecraft:set_lore",
+                "entity" : "this",
+                "replace": true,
+                "lore":[
+                    ["", {"translate":"%sにのみ配布される","with":[{"text":"キラ","italic":false,"color":"red"}],"italic":false,"color":"white"}],
+                    ["", {"translate":"%sに渡すと%sからデスノートを入手することができる","with":[{"text":"死神","italic":false,"color":"light_purple"},{"text":"死神","italic":false,"color":"light_purple"}],"italic":false,"color":"white"}]
+                
+                  ]
+              },{
+                "function":"minecraft:set_nbt",
+                "tag":"{Tags:[\"MDWitem\"]}"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "type": "generic",
+    "pools":[
+      {
+        "rolls":1,
+        "entries":[
+          {
+            "type":"minecraft:item",
+            "name":"minecraft:snowball",
+            "functions":[
+              {
+                "function":"minecraft:set_lore",
+                "entity" : "this",
+                "replace": true,
+                "lore":[
+                    ["", {"translate":"%s専用アイテム","with":[{"text":"死神","italic":false,"color":"light_purple"}],"italic":false,"color":"white"}],
+                    ["", {"translate":"%sで発動","with":[{"keybind":"key.use","italic":false,"color":"green"}],"italic":false,"color":"white"}],
+                    ["", {"translate":"%s間透明化できる","with":[{"text":"120秒","italic":false,"color":"yellow"}],"italic":false,"color":"white"}],
+                    ["", {"translate":"%sで解除できる","with":[{"keybind":"key.sneak","color":"green","italic":false}],"italic":false,"color":"white"}]
+                  ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  
