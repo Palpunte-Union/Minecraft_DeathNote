@@ -1,1 +1,1 @@
-tellraw @a[tag=kira] [{"selector":"@a[tag=L]"},{"translate":"が%sです","with":[{"text":"L","color": "green"}]}]
+tellraw @a[scores={DNRole=1}] [{"selector":"@a[scores={DNRole=6}]"},{"translate":"が%sです","with":[{"text":"L","color": "green"}]}]

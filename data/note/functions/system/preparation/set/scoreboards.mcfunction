@@ -33,21 +33,34 @@ scoreboard objectives add chain_taken minecraft.custom:minecraft.damage_taken
 scoreboard objectives add chaintime dummy
 ##start note
 scoreboard objectives add start_note dummy
+## Role
+scoreboard objectives add DNRole dummy
+
 ## set score
+
+# start count
 scoreboard players set #Note start_note 600
+# invisible time
 scoreboard players set #Note invitime 20
 scoreboard players set #Note invi1 2400
+# PlayerNumber
 scoreboard players set @a PlayerNumber 0
 execute as @a store result score @s PlayerNumber if entity @a[scores={PlayerNumber=0}]
+# kira note
 scoreboard players set @a[tag=kira] note -1
-scoreboard players set #Note deathnote 1
+scoreboard players set @a killtime 0
+# game set count
 scoreboard players set #Note kira_win 1
 scoreboard players set #Note keisatu_win 1
-scoreboard players set @a killtime 0
 scoreboard players set #Note kira_endtime 0
 scoreboard players set #Note L_endtime 0
+# paper give count 
 scoreboard players set #Note papertime 1
+# death count
 scoreboard players set @a deathnote 0
+# SelectNote
 scoreboard players set @a SelectNote 0
 execute as @a store result score @s SelectNote if entity @a[scores={SelectNote=0}]
 gamemode spectator @a[scores={PlayerNumber=21..}]
+# Role
+scoreboard players set @a DNRole 0

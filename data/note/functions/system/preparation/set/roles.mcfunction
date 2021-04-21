@@ -1,12 +1,6 @@
-tag @a remove kira
-execute unless entity @a[tag=misa] run tag @a remove sinigami1212
-tag @a remove L
-tag @a remove satu
-tag @a remove wakarusatu
-tag @a[sort=random,limit=1,tag=!misa,tag=!sinigami1212] add kira
-execute unless entity @a[tag=misa] run tag @a[sort=random,limit=1,tag=!kira,tag=!misa] add sinigami1212
-tag @a[sort=random,limit=1,tag=!kira,tag=!sinigami1212,tag=!misa] add L
-tag @a[tag=!kira,tag=!sinigami1212,tag=!L,tag=!misa] add satu
-tag @a[sort=random,limit=1,tag=satu,tag=!misa] add wakarusatu
-tag @a[tag=!satu,tag=!wakarusatu] add jingai
-tag @a[tag=wakarusatu,tag=!misa] remove satu
+scoreboard players set @a[sort=random,limit=1,scores={DNRole=0}] DNRole 1
+scoreboard players set @a[sort=random,limit=1,scores={DNRole=0}] DNRole 2
+scoreboard players set @a[sort=random,limit=1,scores={DNRole=0}] DNRole 6
+scoreboard players set @a[sort=random,limit=1,scores={DNRole=0}] DNRole 7
+function note_misa:system/preparation/set/role
+scoreboard players set @a[scores={DNRole=0}] DNRole 8

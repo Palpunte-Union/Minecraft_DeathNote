@@ -23,16 +23,22 @@ execute if score #Note start_note matches 0 run title @a title " "
 execute if score #Note start_note matches 0 run title @a subtitle "スタート"
 execute if score #Note start_note matches 0 run playsound block.anvil.use master @a ~ ~ ~ 1 1 1
 
+execute if score #Note start_note matches 0 run tag @a[scores={DNRole=1..6}] add jingai
+execute if score #Note start_note matches 0 run tag @a[scores={DNRole=2}] add nochain
+execute if score #Note start_note matches 0 run tag @a[scores={DNRole=5}] add nochain
 execute if score #Note start_note matches 0 run loot give @a[tag=!jingai] loot note:item/sword/keisatu_sword
-execute if score #Note start_note matches 0 run execute unless entity @a[tag=misa] run loot give @a[tag=jingai] loot note:item/sword/jingai_sword
-execute if score #Note start_note matches 0 run execute if entity @a[tag=misa] run loot give @a[tag=jingai] loot note_misa:jingai_sword
-execute if score #Note start_note matches 0 run loot give @a[tag=!L] loot note:item/other_items/quartz
-execute if score #Note start_note matches 0 run loot give @a[tag=kira] loot note:item/other_items/kira_apple
-execute if score #Note start_note matches 0 run loot give @a[tag=kira] loot note:item/other_items/kira_paper
-execute if score #Note start_note matches 0 run execute if entity @a[scores={PlayerNumber=10..}] run loot give @a[tag=kira] loot note:item/other_items/kira_paper
-execute if score #Note start_note matches 0 run execute if entity @a[scores={PlayerNumber=20..}] run loot give @a[tag=kira] loot note:item/other_items/kira_paper
-execute if score #Note start_note matches 0 run loot replace entity @a[tag=sinigami1212] hotbar.8 loot note:item/other_items/sinigami_snowball
-execute if score #Note start_note matches 0 run loot give @a[tag=wakarusatu] loot note:item/other_items/wakaru_compass
-execute if score #Note start_note matches ..0 run function note:ongame
-execute if score #Note start_note matches 0 run scoreboard players enable @a[tag=L] Document
-execute if score #Note start_note matches 0 run loot give @a[tag=!sinigami1212,tag=!misa,sort=random,limit=1] loot note:item/other_items/chain
+execute if score #Note start_note matches 0 run execute unless score #Note misa matches 1 run loot give @a[tag=jingai] loot note:item/sword/jingai_sword
+execute if score #Note start_note matches 0 run execute if score #Note misa matches 1 run loot give @a[tag=jingai] loot note_misa:jingai_sword
+execute if score #Note start_note matches 0 run loot give @a[scores={DNRole=1..5}] loot note:item/other_items/quartz
+execute if score #Note start_note matches 0 run loot give @a[scores={DNRole=7..8}] loot note:item/other_items/quartz
+execute if score #Note start_note matches 0 run loot give @a[scores={DNRole=1}] loot note:item/other_items/kira_apple
+execute if score #Note start_note matches 0 run loot give @a[scores={DNRole=1}] loot note:item/other_items/kira_paper
+execute if score #Note start_note matches 0 run execute if entity @a[scores={PlayerNumber=10..}] run loot give @a[scores={DNRole=1}] loot note:item/other_items/kira_paper
+execute if score #Note start_note matches 0 run execute if entity @a[scores={PlayerNumber=20..}] run loot give @a[scores={DNRole=1}] loot note:item/other_items/kira_paper
+execute if score #Note start_note matches 0 run loot replace entity @a[scores={DNRole=2}] hotbar.8 loot note:item/other_items/sinigami_snowball
+execute if score #Note start_note matches 0 run loot give @a[scores={DNRole=7}] loot note:item/other_items/wakaru_compass
+execute if score #Note start_note matches ..0 run function note:system/ongame/ongame
+execute if score #Note start_note matches 0 run scoreboard players enable @a[scores={DNRole=6}] Document
+execute if score #Note start_note matches 0 run loot give @a[tag=!nochain,sort=random,limit=1] loot note:item/other_items/chain
+execute if score #Note start_note matches 0 run tag @a[tag=nochain] remove nochain
+execute if score #Note start_note matches 0 run tag @a[tag=jingai] remove jingai

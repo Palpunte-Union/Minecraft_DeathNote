@@ -1,0 +1,1 @@
+title @a[scores={DNRole=5}] title [{"text":"あなたは"},{"text":"ミサ","color":"yellow"},{"text":"です","color":"white"}]
