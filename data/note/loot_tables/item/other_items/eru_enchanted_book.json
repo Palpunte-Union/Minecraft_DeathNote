@@ -23,7 +23,7 @@
                   ]
               },{
                 "function":"minecraft:set_nbt",
-                "tag":"{Tags:[\"DNWitem\"],Enchantments:[{id:\"vanishing_curse\",lvl:1}]}"
+                "tag":"{Tags:[\"DNitem\"],Enchantments:[{id:\"vanishing_curse\",lvl:1}]}"
               }
             ]
           }

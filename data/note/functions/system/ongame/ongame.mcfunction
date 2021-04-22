@@ -68,7 +68,7 @@ execute as @a[scores={DNRole=6,Document=1..}] run function note:system/ongame/do
 execute as @a[scores={RemovedDC=1..,DNRole=6,giveDC=1..}] run loot give @s loot note:item/other_items/eru_enchanted_book
 scoreboard players reset @a[scores={RemovedDC=1..,DNRole=6}] RemovedDC
 scoreboard players set @a[scores={DropDC=1..,DNRole=6}] RemovedDC 1
-kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:enchanted_book",tag:{Enchantments:[{id:"minecraft:vanishing_curse",lvl:1}],Tags:["DNitem"]}}}]
+kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:enchanted_book",tag:{Tags:["DNitem"]}}}]
 execute as @a[scores={RemovedDC=1,DNRole=6}] run function note:system/ongame/document/message_to
 
 scoreboard players reset @a[scores={DNRole=6}] DropDC

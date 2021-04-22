@@ -26,9 +26,8 @@ execute if score #Note start_note matches 0 run playsound block.anvil.use master
 execute if score #Note start_note matches 0 run tag @a[scores={DNRole=1..6}] add jingai
 execute if score #Note start_note matches 0 run tag @a[scores={DNRole=2}] add nochain
 execute if score #Note start_note matches 0 run tag @a[scores={DNRole=5}] add nochain
-execute if score #Note start_note matches 0 run loot give @a[tag=!jingai] loot note:item/sword/keisatu_sword
-execute if score #Note start_note matches 0 run execute unless score #Note misa matches 1 run loot give @a[tag=jingai] loot note:item/sword/jingai_sword
-execute if score #Note start_note matches 0 run execute if score #Note misa matches 1 run clear @a[tag=jingai] diamond_sword
+execute if score #Note start_note matches 0 run execute if score #Note misa matches 0 run loot give @a[tag=!jingai] loot note:item/sword/keisatu_sword
+execute if score #Note start_note matches 0 run execute if score #Note misa matches 0 run loot give @a[tag=jingai] loot note:item/sword/jingai_sword
 execute if score #Note start_note matches 0 run execute if score #Note misa matches 1 run loot give @a[tag=jingai] loot note_misa:jingai_sword
 execute if score #Note start_note matches 0 run loot give @a[scores={DNRole=1..8}] loot note:item/other_items/quartz
 execute if score #Note start_note matches 0 run clear @a[scores={DNRole=6}] quartz

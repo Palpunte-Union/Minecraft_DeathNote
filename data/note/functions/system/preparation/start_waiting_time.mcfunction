@@ -2,6 +2,8 @@ gamemode adventure @a[gamemode=!spectator]
 clear @a
 effect clear @a
 tag @p add DN
+scoreboard objectives add misa dummy
+scoreboard players set #Mote misa 0
 
 function note:system/preparation/set/gamerules
 function note:system/preparation/set/difficulty
