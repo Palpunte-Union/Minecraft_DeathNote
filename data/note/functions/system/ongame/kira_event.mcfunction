@@ -1,5 +1,5 @@
-scoreboard players enable @a[tag=kira] note
-scoreboard players enable @a[tag=kira] killnote
+scoreboard players enable @a[scores={DNRole=1}] note
+scoreboard players enable @a[scores={DNRole=1}] killnote
 
 execute as @a[scores={deathT=1..}] run tag @a[scores={deathT=1..}] add note
 execute as @a[scores={SelectNote=1},tag=SelectNote,gamemode=!spectator] run tellraw @a[scores={deathT=1..}] [{"selector":"@s","color":"green"},{"text":"削除","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/trigger note set 1"}}]

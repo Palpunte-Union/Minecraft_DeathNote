@@ -20,6 +20,10 @@ scoreboard objectives add killtime dummy
 ## Player Number
 scoreboard objectives add PlayerNumber dummy
 scoreboard objectives add Document trigger
+scoreboard objectives add CanDC dummy
+scoreboard objectives add giveDC dummy
+scoreboard objectives add DropDC dropped:enchanted_book
+scoreboard objectives add RemovedDC dummy
 scoreboard objectives add kira_win dummy
 scoreboard objectives add keisatu_win dummy
 scoreboard objectives add papertime dummy

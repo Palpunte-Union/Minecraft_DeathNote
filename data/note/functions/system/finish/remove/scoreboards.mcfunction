@@ -25,6 +25,9 @@ scoreboard objectives remove papertime
 ## Player Number
 scoreboard objectives remove PlayerNumber
 scoreboard objectives remove Document
+scoreboard objectives remove giveDC
+scoreboard objectives remove DropDC
+scoreboard objectives remove RemovedDC
 ## game set
 scoreboard objectives remove kira_endtime
 scoreboard objectives remove L_endtime
