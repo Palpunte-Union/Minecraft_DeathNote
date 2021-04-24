@@ -39,3 +39,7 @@ scoreboard objectives remove chaintime
 scoreboard objectives remove start_note
 ## Role
 scoreboard objectives remove DNRole
+
+scoreboard objectives remove misa
+scoreboard objectives remove misaDeath
+scoreboard objectives remove CanDC
