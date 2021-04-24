@@ -3,7 +3,9 @@ clear @a
 effect clear @a
 tag @p add DN
 scoreboard objectives add misa dummy
-scoreboard players set #Note misa 0
+execute unless entity @a[tag=misaDN] run scoreboard players set #Note misa 0
+execute if entity @a[tag=misaDN] run scoreboard players set #Note misa 1
+tag @a[tag=misaDN] remove misaDN
 
 function note:system/preparation/set/gamerules
 function note:system/preparation/set/difficulty
