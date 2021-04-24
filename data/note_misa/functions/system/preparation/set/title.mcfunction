@@ -1,1 +1,2 @@
 title @a[scores={DNRole=5}] title [{"text":"あなたは"},{"text":"ミサ","color":"yellow"},{"text":"です","color":"white"}]
+title @a[scores={DNRole=5}] subtitle {"translate":"(%s陣営)","with":[{"text":"キラ","color": "red"}]}

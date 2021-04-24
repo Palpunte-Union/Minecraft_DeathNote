@@ -45,6 +45,7 @@ scoreboard players set @e[scores={deathT=1..}] deathT 0
 ## kill time
 scoreboard players set @a[scores={killnote=2}] killtime 1
 scoreboard players add @a[scores={killtime=1..}] killtime 1
+execute at @a[scores={killtime=1..}] run particle dust 0.682 0 1 1 ~ ~ ~ 0.5 0.5 0.5 1 1 force @a[scores={DNRole=1}]
 execute as @a[scores={killtime=800..}] run trigger killnote set 3
 
 ## kira kill effect
@@ -53,8 +54,8 @@ execute as @a[scores={killnote=3,DNRole=1}] unless entity @a[scores={killtime=80
 execute as @a[tag=SelectNote] if score @s SelectNote = @p[scores={killnote=2,DNRole=1}] note run tellraw @a[scores={DNRole=1}] [{"selector":"@s","color": "white"},{"text":" 40秒後に死亡","color":"white"}]
 execute at @e[tag=kill] run particle minecraft:nautilus ~ ~1.5 ~ 0 0 0 3 500
 execute at @e[tag=kill] run particle minecraft:squid_ink ~ ~1.5 ~ 1 1 1 10 100
-execute as @e[tag=kill] run playsound minecraft:block.end_portal.spawn master @s ~ ~ ~ 1 1 1
-execute as @e[tag=kill] run playsound minecraft:block.end_portal.spawn master @s ~ ~ ~ 1 1 1
+execute as @e[tag=kill] run playsound minecraft:entity.blaze.death master @s ~ ~ ~ 1 2 1
+execute as @e[tag=kill] run playsound minecraft:entity.blaze.death master @s ~ ~ ~ 1 2 1
 scoreboard players set @a[scores={killtime=800..}] killtime 0
 execute if entity @a[tag=kill] run scoreboard players set @a[scores={DNRole=1}] LastKill 1
 kill @e[tag=kill]
@@ -72,7 +73,6 @@ scoreboard players set @a[scores={DropDC=1..,DNRole=6}] RemovedDC 1
 kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:enchanted_book",tag:{Tags:["DNitem"]}}}]
 
 scoreboard players reset @a[scores={DNRole=6}] DropDC
-
 
 ## chain
 execute if entity @a[scores={chain_dealt=1..},nbt={SelectedItem:{id:"minecraft:chain"}}] if entity @a[scores={chain_taken=1..}] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 1 1

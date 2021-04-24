@@ -1,4 +1,5 @@
 gamemode adventure @a[gamemode=!spectator]
+title @a reset
 clear @a
 effect clear @a
 tag @p add DN
