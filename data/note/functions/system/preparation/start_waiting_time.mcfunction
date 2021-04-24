@@ -3,7 +3,7 @@ clear @a
 effect clear @a
 tag @p add DN
 scoreboard objectives add misa dummy
-scoreboard players set #Mote misa 0
+scoreboard players set #Note misa 0
 
 function note:system/preparation/set/gamerules
 function note:system/preparation/set/difficulty
@@ -15,3 +15,5 @@ function note:system/preparation/set/tellraw
 execute if score #Note misa matches 1 run function note_misa:system/preparation/set/tellraw
 function note:system/preparation/set/title
 execute if score #Note misa matches 1 run function note_misa:system/preparation/set/title
+function note:system/preparation/set/tags
+scoreboard players set #Note DNPhase 1

@@ -1,7 +1,8 @@
 scoreboard players enable @a[scores={DNRole=1}] note
 scoreboard players enable @a[scores={DNRole=1}] killnote
 
-execute as @a[scores={deathT=1..}] run tag @a[scores={deathT=1..}] add note
+execute as @a[scores={deathT=1..}] run tag @s add note
+execute if entity @a[scores={deathT=1..}] run kill @e[type=item,nbt={Item:{id:"minecraft:paper"}}]
 execute as @a[scores={SelectNote=1},tag=SelectNote,gamemode=!spectator] run tellraw @a[scores={deathT=1..}] [{"selector":"@s","color":"green"},{"text":"削除","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/trigger note set 1"}}]
 execute as @a[scores={SelectNote=2},tag=SelectNote,gamemode=!spectator] run tellraw @a[scores={deathT=1..}] [{"selector":"@s","color":"green"},{"text":"削除","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/trigger note set 2"}}]
 execute as @a[scores={SelectNote=3},tag=SelectNote,gamemode=!spectator] run tellraw @a[scores={deathT=1..}] [{"selector":"@s","color":"green"},{"text":"削除","color":"blue","bold":true,"clickEvent":{"action":"run_command","value":"/trigger note set 3"}}]

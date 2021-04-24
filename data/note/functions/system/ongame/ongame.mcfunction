@@ -65,6 +65,7 @@ tag @a[tag=kill] remove kill
 ## L Document
 execute as @a[scores={DNRole=6},nbt={Inventory:[{id:"minecraft:quartz_block"}]}] run function note:system/ongame/document/document
 execute as @a[scores={DNRole=6,Document=1..}] run function note:system/ongame/document/result
+execute as @a[scores={RemovedDC=1,DNRole=6}] run function note:system/ongame/document/message_to
 execute as @a[scores={RemovedDC=1..,DNRole=6,giveDC=1..}] run loot give @s loot note:item/other_items/eru_enchanted_book
 scoreboard players reset @a[scores={RemovedDC=1..,DNRole=6}] RemovedDC
 scoreboard players set @a[scores={DropDC=1..,DNRole=6}] RemovedDC 1
@@ -72,10 +73,6 @@ kill @e[type=minecraft:item,nbt={Item:{id:"minecraft:enchanted_book",tag:{Tags:[
 
 scoreboard players reset @a[scores={DNRole=6}] DropDC
 
-execute as @a if score @s PlayerNumber = @p[scores={DNRole=6}] Document run tag @s add Documented
-execute as @a[scores={DNRole=2..},tag=Documented] run tellraw @a[scores={DNRole=6}] [{"selector":"@s"},{"text":"はキラではありません"}]
-execute as @a[scores={DNRole=1},tag=Documented] run tellraw @a[scores={DNRole=6}] [{"selector":"@s","color":"dark_red"},{"text":"はキラです","color":"dark_red"}]
-execute as @a[scores={RemovedDC=1,DNRole=6}] run function note:system/ongame/document/message_to
 
 ## chain
 execute if entity @a[scores={chain_dealt=1..},nbt={SelectedItem:{id:"minecraft:chain"}}] if entity @a[scores={chain_taken=1..}] run playsound minecraft:block.chest.close master @a ~ ~ ~ 1 1 1

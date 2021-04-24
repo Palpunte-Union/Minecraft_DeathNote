@@ -68,3 +68,5 @@ execute as @a store result score @s SelectNote if entity @a[scores={SelectNote=0
 gamemode spectator @a[scores={PlayerNumber=21..}]
 # Role
 scoreboard players set @a DNRole 0
+# Phase
+scoreboard objectives add DNPhase dummy

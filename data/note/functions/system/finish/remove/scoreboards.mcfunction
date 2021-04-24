@@ -43,3 +43,4 @@ scoreboard objectives remove DNRole
 scoreboard objectives remove misa
 scoreboard objectives remove misaDeath
 scoreboard objectives remove CanDC
+scoreboard objectives remove DNPhase
