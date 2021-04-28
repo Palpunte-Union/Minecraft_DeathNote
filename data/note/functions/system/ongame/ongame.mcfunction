@@ -66,6 +66,7 @@ tag @a[tag=kill] remove kill
 ## L Document
 execute as @a[scores={DNRole=6},nbt={Inventory:[{id:"minecraft:quartz_block"}]}] run function note:system/ongame/document/document
 execute as @a[scores={DNRole=6,Document=1..}] run function note:system/ongame/document/result
+execute as @a[scores={DNRole=6,CanDC=1..}] run scoreboard players enable @s Document
 execute as @a[scores={RemovedDC=1,DNRole=6}] run function note:system/ongame/document/message_to
 execute as @a[scores={RemovedDC=1..,DNRole=6,giveDC=1..}] run loot give @s loot note:item/other_items/eru_enchanted_book
 scoreboard players reset @a[scores={RemovedDC=1..,DNRole=6}] RemovedDC
